@@ -1,4 +1,5 @@
 Laporan Analisis Workflow KNIME
+<img width="1512" height="982" alt="Screenshot 2025-12-10 at 08 58 36" src="https://github.com/user-attachments/assets/b4bb8e6d-4dec-4a26-98ae-6b39aa0a5468" />
 1. Tujuan Workflow
 Workflow KNIME ini dibuat untuk menganalisis dataset Toyota Corolla dan menemukan warna mobil yang paling sering muncul serta melakukan eksplorasi data melalui beberapa visualisasi seperti:
 
