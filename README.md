@@ -21,7 +21,8 @@ Scatter Plot   <img width="2146" height="516" alt="Scatter Plot" src="https://g
 
 Interpretasi: Scatter Plot (Grafik Sebar) digunakan untuk mengeksplorasi hubungan antara dua variabel numerik, seperti Harga dan Usia Mobil, atau Harga dan Jarak Tempuh. Pola titik yang tersebar menunjukkan korelasi; misalnya, pola menurun menunjukkan hubungan negatif (semakin tinggi satu variabel, semakin rendah yang lain).
 
-Box Plot   <img width="2146" height="516" alt="Box Plot" src="https://github.com/user-attachments/assets/99bf1bcf-b04f-439d-83ce-5f3bfb774971" />
+Box Plot  <img width="2146" height="516" alt="Box Plot" src="https://github.com/user-attachments/assets/55475e76-943e-4622-8536-0af18b7f6d48" />
+
 
 Interpretasi: Box Plot (Diagram Kotak) digunakan untuk membandingkan distribusi variabel numerik (seperti Harga) di berbagai kategori (seperti Jenis Bahan Bakar atau Warna). Kotak menunjukkan jangkauan interkuartil (IQR), garis di tengah adalah median, dan titik di luar kumis (whiskers) adalah outlier harga.
 
