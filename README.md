@@ -2,11 +2,15 @@ Laporan Analisis Workflow KNIME
 1. Tujuan Workflow
 Workflow KNIME ini dibuat untuk menganalisis dataset Toyota Corolla dan menemukan warna mobil yang paling sering muncul serta melakukan eksplorasi data melalui beberapa visualisasi seperti:
 
-Bar Plot
+Bar Plot 1 (Frekuensi Warna)
 
 <img width="2146" height="516" alt="Bar Chart 1" src="https://github.com/user-attachments/assets/c85a4baa-299d-49d9-928d-009109d63a9f" />
 
-Interpretasi: Grafik Batang (Bar Plot) ini menunjukkan frekuensi kemunculan setiap kategori warna mobil dalam dataset. Sumbu X merepresentasikan kategori warna, dan Sumbu Y menunjukkan jumlah (count) mobil untuk setiap warna, mempermudah identifikasi warna dominan.
+Interpretasi: Grafik Batang (Bar Plot 1) ini menunjukkan frekuensi kemunculan setiap kategori warna mobil dalam dataset. Sumbu X merepresentasikan kategori warna, dan Sumbu Y menunjukkan jumlah (count) mobil untuk setiap warna, mempermudah identifikasi warna dominan.
+
+Bar Plot 2 (Harga Rata-Rata per Kategori)
+
+Interpretasi: Grafik Batang (Bar Plot 2) ini membandingkan nilai agregat dari variabel numerik (misalnya, Harga Rata-Rata) berdasarkan kategori (misalnya, Jenis Bahan Bakar atau Transmisi). Bar yang lebih tinggi menunjukkan kategori yang memiliki nilai rata-rata tertinggi, memberikan insight tentang nilai pasar relatif antar kategori.
 
 Pie Chart   <img width="2146" height="516" alt="Pie Chart" src="https://github.com/user-attachments/assets/3ce5672f-68f5-439d-83ce-5f3bfb774971" />
 
@@ -16,7 +20,7 @@ Scatter Plot   <img width="2146" height="516" alt="Scatter Plot" src="https://g
 
 Interpretasi: Scatter Plot (Grafik Sebar) digunakan untuk mengeksplorasi hubungan antara dua variabel numerik, seperti Harga dan Usia Mobil, atau Harga dan Jarak Tempuh. Pola titik yang tersebar menunjukkan korelasi; misalnya, pola menurun menunjukkan hubungan negatif (semakin tinggi satu variabel, semakin rendah yang lain).
 
-Box Plot   <img width="2146" height="516" alt="Box Plot" src="https://github.com/user-attachments/assets/99bf1bcf-b04f-4547-9556-e23948bfbd3e" />
+Box Plot   <img width="2146" height="516" alt="Box Plot" src="https://github.com/user-attachments/assets/99bf1bcf-b04f-439d-83ce-5f3bfb774971" />
 
 Interpretasi: Box Plot (Diagram Kotak) digunakan untuk membandingkan distribusi variabel numerik (seperti Harga) di berbagai kategori (seperti Jenis Bahan Bakar atau Warna). Kotak menunjukkan jangkauan interkuartil (IQR), garis di tengah adalah median, dan titik di luar kumis (whiskers) adalah outlier harga.
 
@@ -122,12 +126,3 @@ Memberi label tertentu berdasarkan kombinasi fitur
 
 4. Kesimpulan
 Workflow KNIME ini memberikan gambaran menyeluruh mengenai data Toyota Corolla, khususnya dari sisi warna mobil dan bagaimana warna tersebut berdistribusi dalam dataset. Penggunaan berbagai node visualisasi membantu mendapatkan insight visual yang mudah dipahami. Workflow ini juga siap digunakan sebagai dasar untuk analisis lanjutan seperti model prediksi harga.
-
-5. Saran Pengembangan Berikutnya
-Tambahkan model machine learning seperti Random Forest atau Linear Regression.
-
-Gunakan Color Manager untuk mempercantik visual pie chart.
-
-Tambahkan Rule Engine (Dictionary) untuk aturan lebih kompleks.
-
-Gunakan AutoML KNIME untuk eksplorasi model otomatis.
