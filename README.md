@@ -8,7 +8,8 @@ Bar Plot 1 (Frekuensi Warna)
 
 Interpretasi: Grafik Batang (Bar Plot 1) ini menunjukkan frekuensi kemunculan setiap kategori warna mobil dalam dataset. Sumbu X merepresentasikan kategori warna, dan Sumbu Y menunjukkan jumlah (count) mobil untuk setiap warna, mempermudah identifikasi warna dominan.
 
-Bar Plot 2 (Harga Rata-Rata per Kategori)
+Bar Plot 2 (Harga Rata-Rata per Kategori)<img width="2146" height="516" alt="Bar Chart" src="https://github.com/user-attachments/assets/fba612ef-85a3-432b-97cb-21f8343060a1" />
+
 
 Interpretasi: Grafik Batang (Bar Plot 2) ini membandingkan nilai agregat dari variabel numerik (misalnya, Harga Rata-Rata) berdasarkan kategori (misalnya, Jenis Bahan Bakar atau Transmisi). Bar yang lebih tinggi menunjukkan kategori yang memiliki nilai rata-rata tertinggi, memberikan insight tentang nilai pasar relatif antar kategori.
 
