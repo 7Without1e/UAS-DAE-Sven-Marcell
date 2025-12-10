@@ -1,64 +1,62 @@
+# 🚗 Proyek Analisis Prediksi Harga Mobil Toyota Corolla
 
-graph TD
-    A[Start] --> B(Memuat Data: ToyotaCorolla.csv);
-    B --> C{Pemisahan Variabel};
-    C --> D[Target: Price];
-    C --> E[Fitur: Age, KM, HP, Weight, ...];
-    E --> F(Pemodelan: Algoritma Regresi);
-    D --> F;
-    F --> G(Evaluasi Model: Test and Score);
-    G --> H{Metrik Kinerja};
-    H --> I[RMSE, MAE, R-squared];
-    I --> J(Interpretasi Hasil);
-    J --> K[End];
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import os
+Proyek ini merupakan analisis eksplorasi data dan pemodelan regresi awal menggunakan dataset `ToyotaCorolla.csv`. Tujuan utamanya adalah memahami faktor-faktor yang mempengaruhi harga jual mobil, dengan fokus pada hubungan antara **Usia Mobil** dan **Jarak Tempuh (KM)**.
 
-# --- 1. Pengaturan Awal ---
+![Gambar alur kerja data mining yang berfokus pada analisis regresi](src=Screenshot 2025-12-10 at 08.58.36.png)
 
-# Set style for better visualization
-sns.set_style("whitegrid")
-# Tentukan nama file dataset
-DATASET_FILE = 'ToyotaCorolla.csv'
-target_variable = 'Price'
+## 💾 Dataset
 
-# --- 2. Pemuatan Data ---
-try:
-    df = pd.read_csv(DATASET_FILE)
-    print(f"Dataset '{DATASET_FILE}' berhasil dimuat.")
-except FileNotFoundError:
-    print(f"ERROR: File '{DATASET_FILE}' tidak ditemukan. Pastikan file berada di direktori yang sama.")
-    # Keluar dari skrip jika file tidak ditemukan
-    exit()
+Dataset: `ToyotaCorolla.csv`
+Sumber: Data historis penjualan mobil Toyota Corolla.
 
-# --- 3. Visualisasi Data ---
+| Variabel | Deskripsi | Tipe Data |
+| :--- | :--- | :--- |
+| `Price` | Harga jual mobil (Variabel Target) | Numerik (Integer) |
+| `Age_08_04` | Usia mobil dalam bulan pada tanggal penawaran | Numerik (Integer) |
+| `KM` | Jarak tempuh mobil dalam kilometer | Numerik (Integer) |
+| `HP` | Tenaga kuda (*Horse Power*) | Numerik (Integer) |
+| `Weight` | Berat mobil | Numerik (Integer) |
+| `Fuel_Type` | Jenis bahan bakar (Petrol, Diesel, CNG) | Kategorikal |
 
-print("\n--- Membuat Visualisasi Korelasi ---")
+## ⚙️ Pengaturan dan Eksperimen
 
-# Plot 1: Korelasi Harga vs Umur (Age_08_04)
-# Visualisasi ini akan menunjukkan korelasi negatif: semakin tua mobil, semakin rendah harganya.
-plt.figure(figsize=(10, 6))
-sns.scatterplot(x='Age_08_04', y=target_variable, data=df, color='skyblue', alpha=0.7)
-plt.title('Korelasi: Umur Mobil (Bulan) vs Harga', fontsize=16)
-plt.xlabel('Umur Mobil (Age_08_04 - Bulan)', fontsize=12)
-plt.ylabel(f'Harga ({target_variable})', fontsize=12)
-plt.grid(True, linestyle='--', alpha=0.6)
-plt.savefig('visualisasi_umur_vs_harga.png')
-plt.close()
-print("Visualisasi 'visualisasi_umur_vs_harga.png' berhasil disimpan.")
+Berdasarkan *screenshot* yang disediakan (menunjukkan *workflow* di Orange Data Mining atau platform serupa), proyek ini menggunakan alur kerja sebagai berikut:
 
-# Plot 2: Korelasi Harga vs Jarak Tempuh (KM)
-# Visualisasi ini akan menunjukkan korelasi negatif: semakin jauh jarak tempuh, semakin rendah harganya.
-plt.figure(figsize=(10, 6))
-sns.scatterplot(x='KM', y=target_variable, data=df, color='lightcoral', alpha=0.7)
-plt.title('Korelasi: Jarak Tempuh (KM) vs Harga', fontsize=16)
-plt.xlabel('Jarak Tempuh (KM)', fontsize=12)
-plt.ylabel(f'Harga ({target_variable})', fontsize=12)
-plt.grid(True, linestyle='--', alpha=0.6)
-plt.savefig('visualisasi_km_vs_harga.png')
-plt.close()
-print("Visualisasi 'visualisasi_km_vs_harga.png' berhasil disimpan.")
+1.  **Input Data**: Memuat `ToyotaCorolla.csv`.
+2.  **Pemilihan Fitur**: `Price` ditetapkan sebagai variabel Target, sementara `Age_08_04`, `KM`, `HP`, `Weight`, dll., digunakan sebagai Variabel Prediktor.
+3.  **Model Regresi**: Digunakan untuk memprediksi `Price`.
+4.  **Evaluasi (*Test and Score*)**: Menggunakan metrik seperti $R^2$ (untuk goodness-of-fit) dan RMSE/MAE (untuk mengukur kesalahan prediksi model).
 
-print("\nVisualisasi selesai. Unggah kedua file .png hasil ini ke GitHub untuk ditampilkan di README.")
+## 📊 Visualisasi Data Utama dan Insight
+
+Visualisasi di bawah ini memperjelas hubungan antara variabel prediktor utama (`Age_08_04` dan `KM`) dengan variabel target (`Price`).
+
+### 1. Hubungan antara Umur Mobil (Bulan) dan Harga
+
+Visualisasi ini menunjukkan hubungan antara usia mobil (dalam bulan) dan harga jualnya.
+
+![visualisasi_umur_vs_harga](visualisasi_umur_vs_harga.png)
+
+#### **Insight dari Grafik Umur vs Harga:**
+
+1.  **Korelasi Negatif Kuat:** Terdapat hubungan negatif yang jelas. Semakin tua usia mobil (`Age_08_04` meningkat), harga mobil (`Price`) cenderung menurun secara drastis.
+2.  **Depresiasi Cepat:** Penurunan harga sangat cepat terjadi dalam rentang usia muda hingga menengah.
+3.  **Variasi Harga:** Variasi harga mobil pada usia muda (di bawah 30 bulan) lebih lebar, menunjukkan pengaruh faktor lain selain usia (seperti jenis model atau fitur) pada mobil yang relatif baru.
+
+---
+
+### 2. Hubungan antara Jarak Tempuh (KM) dan Harga
+
+Visualisasi ini menunjukkan hubungan antara jarak tempuh mobil (dalam KM) dan harga jualnya.
+
+![visualisasi_km_vs_harga](visualisasi_km_vs_harga.png)
+
+#### **Insight dari Grafik Jarak Tempuh vs Harga:**
+
+1.  **Korelasi Negatif:** Mirip dengan usia, ada korelasi negatif. Semakin tinggi jarak tempuh (`KM`), semakin rendah harga jualnya.
+2.  **Penurunan Signifikan:** Harga akan mengalami penurunan yang signifikan ketika jarak tempuh melampaui ambang batas tertentu (misalnya, di atas 100.000 KM), yang merupakan titik kritis dalam persepsi nilai mobil bekas.
+3.  **Prediktor Penting:** Baik usia maupun jarak tempuh adalah prediktor yang sangat kuat dan harus menjadi komponen inti dalam model prediksi harga mobil.
+
+## 🐍 Kode Analisis
+
+Kode Python untuk memuat data dan menghasilkan visualisasi di atas tersedia dalam file: [`data_analysis.py`](data_analysis.py).
