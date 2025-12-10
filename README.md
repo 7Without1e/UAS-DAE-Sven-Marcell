@@ -119,11 +119,5 @@ Workflow KNIME ini memberikan gambaran menyeluruh mengenai data Toyota Corolla, 
 
 ---
 
-## 5. Saran Pengembangan Berikutnya
-
-* Tambahkan model machine learning seperti Random Forest atau Linear Regression.
-* Gunakan Color Manager untuk mempercantik visual pie chart.
-* Tambahkan Rule Engine (Dictionary) untuk aturan lebih kompleks.
-* Gunakan AutoML KNIME untuk eksplorasi model otomatis.
 
 
