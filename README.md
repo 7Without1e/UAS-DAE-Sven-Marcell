@@ -2,7 +2,7 @@
 
 Proyek ini merupakan analisis eksplorasi data dan pemodelan regresi awal menggunakan dataset `ToyotaCorolla.csv`. Tujuan utamanya adalah memahami faktor-faktor yang mempengaruhi harga jual mobil, dengan fokus pada hubungan antara **Usia Mobil** dan **Jarak Tempuh (KM)**.
 
-![Gambar alur kerja data mining yang berfokus pada analisis regresi](![Uploading image.png…]()
+![Gambar alur kerja data mining yang berfokus pada analisis regresi](Screenshot 2025-12-10 at 08.58.36.png)
 )
 
 ## 💾 Dataset
