@@ -10,7 +10,7 @@ Interpretasi: Grafik Batang (Bar Plot 1) ini menunjukkan frekuensi kemunculan se
 Bar Plot 2 (Harga Rata-Rata per Kategori)<img width="2146" height="516" alt="Bar Chart" src="https://github.com/user-attachments/assets/fba612ef-85a3-432b-97cb-21f8343060a1" />
 
 
-Interpretasi: Grafik Batang (Bar Plot 2) ini membandingkan nilai agregat dari variabel numerik (asumsi: Harga Rata-Rata) berdasarkan kategori (asumsi: Jenis Bahan Bakar seperti Petrol, Diesel, CNG). Bar yang lebih tinggi menunjukkan kategori yang memiliki nilai rata-rata tertinggi, memberikan insight tentang nilai pasar relatif dan preferensi pembeli berdasarkan jenis bahan bakar.
+Interpretasi: Grafik tersebut menunjukkan perbandingan nilai prediksi model untuk tiga fitur—Price, Age_08_04, dan KM—berdasarkan warna mobil. Pada fitur Price, seluruh warna memiliki nilai prediksi yang sangat kecil sehingga menunjukkan bahwa warna mobil tidak berpengaruh signifikan terhadap prediksi harga. Sebaliknya, pada fitur Age_08_04, nilai prediksinya tinggi dan bervariasi, menandakan bahwa umur kendaraan menjadi faktor yang kuat dalam prediksi, dengan beberapa warna seperti Black, Red, dan Unknown menunjukkan pola yang lebih tinggi. Pada fitur KM, tinggi bar juga bervariasi antar warna, menggambarkan bahwa jarak tempuh diprediksi berbeda-beda tergantung warna, sehingga model menunjukkan adanya pola tertentu pada prediksi KM berdasarkan warna mobil.
 
 Pie Chart   <img width="2146" height="516" alt="Pie Chart" src="https://github.com/user-attachments/assets/3ce5672f-68f5-439d-83ce-5f3bfb774971" />
 
